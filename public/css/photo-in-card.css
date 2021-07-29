@@ -1,0 +1,52 @@
+/* Logo */
+
+.logo-game {
+    height: 340px;
+    /* width: 340px; */
+}
+
+
+/*  */
+
+.actions a:first-of-type {
+    margin-right: 6px;
+}
+
+.actions a:last-of-type {
+    margin-left: 6px;
+}
+
+
+/* desktop */
+
+@media (min-width: 641px) {
+    .mobile-logo {
+        display: none !important;
+    }
+    .desktop-logo {
+        display: block !important;
+    }
+}
+
+
+/* mobile */
+
+@media (max-width: 640px) {
+    .logo-game {
+        height: 540px;
+    }
+    .mobile-logo {
+        display: block !important;
+    }
+    .desktop-logo {
+        display: none !important;
+    }
+    /* ketika device memiliki lebar maksimal 640px
+    ubah menjadi */
+    .actions {
+        flex-direction: column !important;
+    }
+    .actions a {
+        margin: 5px 0 5px 0 !important;
+    }
+}
