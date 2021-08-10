@@ -5,6 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- favicon pada title bar -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
     <title><?= $title_bar; ?></title>
     <!-- css using Materialize CSS -->
     <link rel="stylesheet" href="/css/materialize.min.css">
@@ -39,12 +50,19 @@
     <!-- #708090 -->
     <!-- #3a4856-->
     <!-- #8dafce-->
+
 </head>
 
 <body>
     <!-- navbar for desktop and mobile devices -->
-    <nav>
-        <div class="nav-wrapper">
+    <nav uk-sticky>
+        <div class="nav-wrapper" style="height: 66px !important;">
+            <!-- hamburger menu untuk mobile device -->
+            <a href="#" class="uk-button uk-hidden@m waves-effect" style="text-decoration: none; background-color: rgb(112, 128, 144, 0.95);" uk-toggle="target: #offcanvas-overlay">
+                <i class="material-icons">
+                    menu
+                </i>
+            </a>
 
             <a href="#" class="brand-logo" style="font-family: 'Press Start 2P', cursive; text-transform: uppercase; letter-spacing: 4px; font-size: 20px; color:inherit; text-decoration:none;">
                 KanalGame
@@ -52,21 +70,15 @@
                     sports_esports
                 </i>
             </a>
-            <!-- hamburger menu untuk mobile device -->
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-                <i class="material-icons">
-                    menu
-                </i>
-            </a>
-            <ul class="right hide-on-med-and-down" style="font-family: 'Barlow Condensed', sans-serif; letter-spacing: 4px;">
+            <ul class="right hide-on-med-and-down" style="font-family: 'Barlow Condensed', sans-serif; letter-spacing:4px;">
                 <li>
                     <a href="<?= base_url(); ?>/KanalGame/index" class="waves-effect" style="text-transform: uppercase; color:inherit; text-decoration:none;">
-                        Walkthrough
+                        Home
                     </a>
                 </li>
                 <li>
-                    <a href="/KanalGame/about_game" class="waves-effect" style="text-transform: uppercase; color:inherit; text-decoration:none;">
-                        About Game
+                    <a href="<?= base_url(); ?>/KanalGame/about_game" class="waves-effect" style="text-transform: uppercase; color:inherit; text-decoration:none;">
+                        Game
                     </a>
                 </li>
                 <li>
@@ -75,21 +87,49 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="waves-effect" style="text-transform: uppercase; color:inherit; text-decoration:none;">
-                        Contact
+                    <a href="<?= base_url(); ?>/KanalGame/about_us" class="waves-effect" style="text-transform: uppercase; color:inherit; text-decoration:none;">
+                        About
                     </a>
                 </li>
             </ul>
+
         </div>
+
     </nav>
+    style="background-color:#3a4856 ;
+    <!-- navbar mobile -->
+    <div id="offcanvas-overlay" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar">
+            <a class=" uk-offcanvas-close waves-effect" type="button" uk-close style="text-decoration: none;"></a>
 
-    <ul class="sidenav" id="mobile-demo">
-        <li><a href="<?= base_url(); ?>/KanalGame/index">Walkthrough</a></li>
-        <li><a href="<?= base_url(); ?>/KanalGame/about_game">About Game</a></li>
-        <li><a href="#">Suggest</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
+            <div class="uk-nav uk-nav-default ">
+                <ul class="uk-margin-top" style="margin-top:2rem !important;">
+                    <li>
+                        <a href="<?= base_url(); ?>/KanalGame/index" style="color:inherit;" class="uk-margin-medium uk-margin-medium-left uk-margin-medium-right">
+                            Walkthrough
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?= base_url(); ?>/KanalGame/about_game" style="color:inherit;" class="uk-margin-medium uk-margin-medium-left uk-margin-medium-right">
+                            About Game
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="color:inherit;" class="uk-margin-medium uk-margin-medium-left uk-margin-medium-right">
+                            Suggest
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="color:inherit;" class="uk-margin-medium uk-margin-medium-left uk-margin-medium-right">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
 
+            </div>
+
+        </div>
+    </div>
 
 
 
@@ -97,15 +137,18 @@
     <!-- bagian isi dari tiap halaman -->
     <?= $this->renderSection('content'); ?>
 
+    <script>
 
+    </script>
 
     <!-- js using Materialize JS -->
-    <script src="/js/materialize.min.js"></script>
+    <script src="/js/materialize.min.js" async="false">
+    </script>
 
     <!-- UI Kit js -->
-    <script src="/js/uikit.min.js"></script>
+    <script src="/js/uikit.min.js" async="false"></script>
 
-    <script src="/js/uikit-icons.min.js"></script>
+    <script src="/js/uikit-icons.min.js" async="false"></script>
 
     <!-- Ion Icon -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

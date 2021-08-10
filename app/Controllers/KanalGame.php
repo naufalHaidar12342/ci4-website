@@ -22,4 +22,12 @@ class KanalGame extends BaseController
 
         return view('pages/about-game', $data);
     }
+    public function about_us()
+    {
+        $data = [
+            'title_bar' => 'Tentang Kami'
+        ];
+
+        return view('pages/about-us', $data);
+    }
 }
