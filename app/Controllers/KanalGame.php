@@ -2,25 +2,43 @@
 
 namespace App\Controllers;
 
+use App\Models\DaftarGame_Model;
+use App\Models\KategoriGame_Model;
+
 class KanalGame extends BaseController
 {
+    protected $daftar_game;
+    protected $genre_game;
+    public function __construct()
+    {
+        $this->daftar_game = new DaftarGame_Model();
+        $this->genre_game = new KategoriGame_Model();
+    }
 
+    // method yang pertama kali dipanggil oleh Routes
     public function index()
     {
         $data = [
             'title_bar' => 'Home'
         ];
 
-        return view('pages/home', $data);
+        return view('pages/homepage', $data);
     }
 
-    public function about_game()
+    public function save_suggested()
+    {
+        $game_title = "";
+        $slugs = url_title($game_title, $pemisah = '-', true);
+
+        $container = [];
+    }
+
+    public function suggest()
     {
         $data = [
-            'title_bar' => 'Game Info'
+            'title_bar' => 'Suggest A Game!'
         ];
-
-        return view('pages/about-game', $data);
+        return view('pages/suggest-game', $data);
     }
     public function about_us()
     {

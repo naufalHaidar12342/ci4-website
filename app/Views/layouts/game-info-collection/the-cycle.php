@@ -2,7 +2,7 @@
     <!-- The Cycle -->
     <div class="uk-card uk-card-hover uk-card-default uk-border-rounded">
         <div class="uk-card-media-top">
-            <img src="/img/SplashScreen_TheCycle.png" alt="" width="100%" height="" uk-img>
+            <img src="/img/SplashScreen_TheCycle.webp" alt="" width="100%" height="" uk-img>
         </div>
 
         <div class="uk-card-body">

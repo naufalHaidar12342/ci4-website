@@ -37,30 +37,7 @@
             <!-- bagian tags dari game/kategori game itu  -->
             <div uk-margin>
                 Genre/Kategori :
-                <div class="chip z-depth-2">
-                    <!-- ganti icon dengan icon yang sesuai
-                    untuk genre dari game tersebut.  -->
-                    <i class="ri-sword-fill"></i>
-                    Action
-                </div>
-                <div class="chip z-depth-2">
-                    <!-- ganti icon dengan icon yang sesuai
-                    untuk genre dari game tersebut.  -->
-                    <i class='bx bx-target-lock'></i>
-                    Shooter
-                </div>
-                <div class="chip z-depth-2">
-                    <!-- ganti icon dengan icon yang sesuai
-                    untuk genre dari game tersebut.  -->
-                    <i class="ri-group-fill"></i>
-                    Multiplayer
-                </div>
-                <div class="chip z-depth-2">
-                    <!-- ganti icon dengan icon yang sesuai
-                    untuk genre dari game tersebut.  -->
-                    <i class="fas fa-hands-helping"></i>
-                    Co-op
-                </div>
+
             </div>
 
             <p uk-margin>

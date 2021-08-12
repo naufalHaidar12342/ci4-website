@@ -2,7 +2,7 @@
 <div id="world-war-z">
     <div class="uk-card uk-card-hover uk-card-default uk-border-rounded">
         <div class="uk-card-media-top">
-            <img src="/img/WWZ-14.jpg" alt="">
+            <img src="/img/WWZ-14.jpg" alt="" width="100%" uk-img>
         </div>
         <div class="uk-card-body">
             <h3 class="uk-card-title">

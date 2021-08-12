@@ -54,22 +54,24 @@
 </head>
 
 <body>
-    <!-- navbar for desktop and mobile devices -->
+
     <nav uk-sticky>
         <div class="nav-wrapper" style="height: 66px !important;">
             <!-- hamburger menu untuk mobile device -->
-            <a href="#" class="uk-button uk-hidden@m waves-effect" style="text-decoration: none; background-color: rgb(112, 128, 144, 0.95);" uk-toggle="target: #offcanvas-overlay">
+            <a class="uk-button uk-hidden@m waves-effect waves-light" style="text-decoration: none; background-color: rgb(112, 128, 144, 0.15);" uk-toggle="target: #offcanvas-reveal">
                 <i class="material-icons">
                     menu
                 </i>
             </a>
 
-            <a href="#" class="brand-logo" style="font-family: 'Press Start 2P', cursive; text-transform: uppercase; letter-spacing: 4px; font-size: 20px; color:inherit; text-decoration:none;">
+            <!-- brand logo/nama website -->
+            <a href="#" class="brand-logo uk-margin-small-left " style="font-family: 'Press Start 2P', cursive; text-transform: uppercase; letter-spacing: 2px; font-size: 20px; color:inherit; text-decoration:none; vertical-align: middle !important; text-align: center !important;">
                 KanalGame
                 <i class="material-icons md-24 right">
                     sports_esports
                 </i>
             </a>
+
             <ul class="right hide-on-med-and-down" style="font-family: 'Barlow Condensed', sans-serif; letter-spacing:4px;">
                 <li>
                     <a href="<?= base_url(); ?>/KanalGame/index" class="waves-effect" style="text-transform: uppercase; color:inherit; text-decoration:none;">
@@ -77,12 +79,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="<?= base_url(); ?>/KanalGame/about_game" class="waves-effect" style="text-transform: uppercase; color:inherit; text-decoration:none;">
-                        Game
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="waves-effect" style="text-transform: uppercase; color:inherit; text-decoration:none;">
+                    <a href="<?= base_url(); ?>/KanalGame/suggest" class="waves-effect" style="text-transform: uppercase; color:inherit; text-decoration:none;">
                         Suggest
                     </a>
                 </li>
@@ -96,32 +93,36 @@
         </div>
 
     </nav>
-    style="background-color:#3a4856 ;
+
     <!-- navbar mobile -->
-    <div id="offcanvas-overlay" uk-offcanvas="overlay: true">
-        <div class="uk-offcanvas-bar">
+    <div id="offcanvas-reveal" uk-offcanvas=" mode:reveal; overlay: true">
+        <div class="uk-offcanvas-bar" style="background-color:#3a4856;">
+            <!-- tombol close -->
             <a class=" uk-offcanvas-close waves-effect" type="button" uk-close style="text-decoration: none;"></a>
 
             <div class="uk-nav uk-nav-default ">
-                <ul class="uk-margin-top" style="margin-top:2rem !important;">
-                    <li>
-                        <a href="<?= base_url(); ?>/KanalGame/index" style="color:inherit;" class="uk-margin-medium uk-margin-medium-left uk-margin-medium-right">
-                            Walkthrough
+                <ul style="font-family: 'Barlow Condensed', sans-serif; letter-spacing:4px; font-size:16px;">
+                    <li class="uk-nav-header uk-margin" style="margin-top:2rem !important;">
+                        <a href="#" class="btn-floating btn-large pulse" style="background-color: #8dafce;">
+                            <img src="/img/sports_esports_white_48dp.svg" alt="" width="100%" height="100%" uk-img>
                         </a>
                     </li>
                     <li>
-                        <a href="<?= base_url(); ?>/KanalGame/about_game" style="color:inherit;" class="uk-margin-medium uk-margin-medium-left uk-margin-medium-right">
-                            About Game
+                        <a href="<?= base_url(); ?>/KanalGame/index" style="color:inherit;" class="uk-margin-medium uk-button-text uk-margin-medium-left uk-margin-medium-right waves-effect waves-light">
+                            Home
+                            <i class="fas fa-route" style="margin-left:4px;"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#" style="color:inherit;" class="uk-margin-medium uk-margin-medium-left uk-margin-medium-right">
+                        <a href="#" style="color:inherit;" class="uk-margin-medium uk-margin-medium-left uk-margin-medium-right uk-button-text ">
                             Suggest
+                            <i class="far fa-envelope" style="margin-left:4px;"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#" style="color:inherit;" class="uk-margin-medium uk-margin-medium-left uk-margin-medium-right">
+                        <a href="#" style="color:inherit;" class="uk-margin-medium uk-margin-medium-left uk-margin-medium-right uk-button-text ">
                             Contact
+                            <i class="fas fa-address-card" style="margin-left:4px;"></i>
                         </a>
                     </li>
                 </ul>
