@@ -67,14 +67,30 @@ class ContentSecurityPolicy extends BaseConfig
 	 *
 	 * @var string|string[]
 	 */
-	public $styleSrc = 'self';
+	//public $styleSrc = 'self';
+	public $styleSrc = [
+		'/css/materialize.min.css',
+		'/css/uikit.min.css',
+		'https://fonts.googleapis.com/icon?family=Material+Icons',
+		'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css',
+		'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css',
+		'https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css',
+		'https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css',
+
+
+	];
 
 	/**
 	 * Defines the origins from which images can be loaded.
 	 *
 	 * @var string|string[]
 	 */
-	public $imageSrc = 'self';
+	// public $imageSrc = 'self';
+	public $imageSrc = [
+		'/img/',
+		'/img/favicon/',
+
+	];
 
 	/**
 	 * Restricts the URLs that can appear in a page's `<base>` element.
@@ -105,7 +121,12 @@ class ContentSecurityPolicy extends BaseConfig
 	 *
 	 * @var string|string[]
 	 */
-	public $fontSrc = null;
+	// public $fontSrc = null;
+	public $fontSrc = [
+		'ttps://fonts.googleapis.com',
+		'https://fonts.gstatic.com',
+		'https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Press+Start+2P&display=swap',
+	];
 
 	/**
 	 * Lists valid endpoints for submission from `<form>` tags.

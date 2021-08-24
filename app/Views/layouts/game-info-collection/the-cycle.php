@@ -1,8 +1,8 @@
-<div id="the-cycle">
+<div>
     <!-- The Cycle -->
-    <div class="uk-card uk-card-hover uk-card-default uk-border-rounded">
+    <div class="uk-card uk-card-hover uk-card-default" style="border-radius: 10px;">
         <div class="uk-card-media-top">
-            <img src="/img/SplashScreen_TheCycle.webp" alt="" width="100%" height="" uk-img>
+            <img src="/img/SplashScreen_TheCycle.webp" style="border-radius: 5px;" alt="" width="100%" height="" uk-img>
         </div>
 
         <div class="uk-card-body">
@@ -31,34 +31,24 @@
                 </li>
             </ul>
             <!-- bagian tags dari game/kategori game itu  -->
-            <div uk-margin>
-                Genre/Kategori :
-                <div class="chip z-depth-2">
-                    <i class="ri-sword-fill"></i>
-                    Action
+            <div uk-margin class="uk-flex uk-flex-column">
+                <div>
+                    Genre/Kategori :
                 </div>
-                <div class="chip z-depth-2">
-                    <!-- <i class='bx bx-target-lock bx-burst'></i> -->
-                    <i class='bx bx-target-lock'></i>
-                    Shooter
-                </div>
-                <div class="chip z-depth-2">
-                    <i class="ri-group-fill"></i>
-                    Multiplayer
-                </div>
-
-                <div class="chip z-depth-2">
-                    <i class="fas fa-hands-helping"></i>
-                    Survival
+                <div class="uk-flex-wrap">
+                    <?= $this->include('/layouts/genre-collection/action'); ?>
+                    <?= $this->include('/layouts/genre-collection/shooter'); ?>
+                    <?= $this->include('/layouts/genre-collection/multi-player'); ?>
+                    <?= $this->include('/layouts/genre-collection/survival'); ?>
                 </div>
             </div>
             <p uk-margin>
-                <a href="https://store.steampowered.com/app/868270/The_Cycle/" class="uk-button uk-margin-right light-blue darken-2 waves-effect waves-light" style="color:white;">
+                <a href="https://store.steampowered.com/app/868270/The_Cycle/" class="uk-button uk-margin-right light-blue darken-2 waves-effect waves-light" style="color: white; border-radius: 16px; text-decoration:none;" target="_blank" rel="noreferrer">
                     <i class="fab fa-steam"></i>
                     Steam
                 </a>
-                <a href="https://www.epicgames.com/store/en-US/p/thecycle" class="uk-button waves-effect waves-light" style="color:white; background-color: #2a2a2a;">
-                    <img src="/img/epic_logo_filled_white.png" alt="Epic Game Logo" width="14" height="14">
+                <a href="https://www.epicgames.com/store/en-US/p/thecycle" target="_blank" rel="noreferrer" class="uk-button waves-effect waves-light" style="color: white; background-color: #2a2a2a; border-radius: 16px; text-decoration: none;">
+                    <img src="/img/epic_logo_filled_white.png" alt="Epic Game Logo" width="24" height="24">
                     Epic Games Store
                 </a>
             </p>

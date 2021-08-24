@@ -1,8 +1,8 @@
 <!-- world war z -->
-<div id="world-war-z">
-    <div class="uk-card uk-card-hover uk-card-default uk-border-rounded">
+<div>
+    <div class="uk-card uk-card-hover uk-card-default " style="border-radius: 10px;">
         <div class="uk-card-media-top">
-            <img src="/img/WWZ-14.jpg" alt="" width="100%" uk-img>
+            <img src="/img/WWZ-14.webp" style="border-radius: 5px;" alt="" width="100%" uk-img>
         </div>
         <div class="uk-card-body">
             <h3 class="uk-card-title">
@@ -30,6 +30,18 @@
                     </p>
                 </li>
             </ul>
+            <div uk-margin class="uk-flex uk-flex-column">
+                <div>Genre/Kategori :</div>
+                <div class="uk-flex-wrap">
+                    <?= $this->include('/layouts/genre-collection/action'); ?>
+                    <?= $this->include('/layouts/genre-collection/co-op'); ?>
+                    <?= $this->include('/layouts/genre-collection/third-person-shooter'); ?>
+                    <?= $this->include('/layouts/genre-collection/zombie'); ?>
+                </div>
+                https://www.epicgames.com/store/en-US/p/world-war-z--goty-edition
+
+                https://www.youtube.com/watch?v=_v51ztGkMV8
+            </div>
         </div>
 
     </div>

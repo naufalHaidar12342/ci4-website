@@ -1,4 +1,4 @@
-<div id="nama-gamenya(untuk mempermudah proses sortir)">
+<div>
     <!-- Judul Gamenya -->
     <div class="uk-card uk-card-hover uk-card-default uk-border-rounded">
         <div class="uk-card-media-top">

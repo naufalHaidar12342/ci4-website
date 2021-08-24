@@ -1,4 +1,4 @@
-<div class="chip z-depth-2">
+<div class="chip z-depth-2 uk-margin-right uk-margin-bottom uk-margin-top uk-text-center">
     <i class="fas fa-hands-helping"></i>
     Co-op
 </div>

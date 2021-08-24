@@ -15,23 +15,24 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-
+    <!-- akan menerima kiriman key bernama'title_bar' milik array. dikirim
+    oleh controller -->
     <title><?= $title_bar; ?></title>
+
     <!-- css using Materialize CSS -->
     <link rel="stylesheet" href="/css/materialize.min.css">
 
     <!-- UI Kit css -->
     <link rel="stylesheet" href="/css/uikit.min.css">
 
-
     <!-- material icon by Google Fonts-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" crossorigin="anonymous">
 
     <!-- font awesome icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- bootstrap 5 icon -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" crossorigin="anonymous">
 
     <!-- remixicon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -50,89 +51,50 @@
     <!-- #708090 -->
     <!-- #3a4856-->
     <!-- #8dafce-->
+    <style>
+        @font-face {
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            src: url(''), local();
+        }
+
+        .steam-download {
+            color: white;
+            border-radius: 16px;
+            text-decoration: none;
+
+        }
+
+        .egs-download {
+            color: white;
+            background-color: #2a2a2a;
+            border-radius: 16px;
+            text-decoration: none;
+        }
+
+        .download-button {
+            border-radius: 16px;
+        }
+
+        .container-about-1 {
+            padding-bottom: 3rem !important;
+            padding-top: 3rem !important;
+            max-width: 960px;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
 
 </head>
 
 <body>
 
-    <nav uk-sticky>
-        <div class="nav-wrapper" style="height: 66px !important;">
-            <!-- hamburger menu untuk mobile device -->
-            <a class="uk-button uk-hidden@m waves-effect waves-light" style="text-decoration: none; background-color: rgb(112, 128, 144, 0.15);" uk-toggle="target: #offcanvas-reveal">
-                <i class="material-icons">
-                    menu
-                </i>
-            </a>
-
-            <!-- brand logo/nama website -->
-            <a href="#" class="brand-logo uk-margin-small-left " style="font-family: 'Press Start 2P', cursive; text-transform: uppercase; letter-spacing: 2px; font-size: 20px; color:inherit; text-decoration:none; vertical-align: middle !important; text-align: center !important;">
-                KanalGame
-                <i class="material-icons md-24 right">
-                    sports_esports
-                </i>
-            </a>
-
-            <ul class="right hide-on-med-and-down" style="font-family: 'Barlow Condensed', sans-serif; letter-spacing:4px;">
-                <li>
-                    <a href="<?= base_url(); ?>/KanalGame/index" class="waves-effect" style="text-transform: uppercase; color:inherit; text-decoration:none;">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="<?= base_url(); ?>/KanalGame/suggest" class="waves-effect" style="text-transform: uppercase; color:inherit; text-decoration:none;">
-                        Suggest
-                    </a>
-                </li>
-                <li>
-                    <a href="<?= base_url(); ?>/KanalGame/about_us" class="waves-effect" style="text-transform: uppercase; color:inherit; text-decoration:none;">
-                        About
-                    </a>
-                </li>
-            </ul>
-
-        </div>
-
-    </nav>
-
-    <!-- navbar mobile -->
-    <div id="offcanvas-reveal" uk-offcanvas=" mode:reveal; overlay: true">
-        <div class="uk-offcanvas-bar" style="background-color:#3a4856;">
-            <!-- tombol close -->
-            <a class=" uk-offcanvas-close waves-effect" type="button" uk-close style="text-decoration: none;"></a>
-
-            <div class="uk-nav uk-nav-default ">
-                <ul style="font-family: 'Barlow Condensed', sans-serif; letter-spacing:4px; font-size:16px;">
-                    <li class="uk-nav-header uk-margin" style="margin-top:2rem !important;">
-                        <a href="#" class="btn-floating btn-large pulse" style="background-color: #8dafce;">
-                            <img src="/img/sports_esports_white_48dp.svg" alt="" width="100%" height="100%" uk-img>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?= base_url(); ?>/KanalGame/index" style="color:inherit;" class="uk-margin-medium uk-button-text uk-margin-medium-left uk-margin-medium-right waves-effect waves-light">
-                            Home
-                            <i class="fas fa-route" style="margin-left:4px;"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" style="color:inherit;" class="uk-margin-medium uk-margin-medium-left uk-margin-medium-right uk-button-text ">
-                            Suggest
-                            <i class="far fa-envelope" style="margin-left:4px;"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" style="color:inherit;" class="uk-margin-medium uk-margin-medium-left uk-margin-medium-right uk-button-text ">
-                            Contact
-                            <i class="fas fa-address-card" style="margin-left:4px;"></i>
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
-
-        </div>
-    </div>
-
-
+    <?= $this->include('/layouts/navigation-bar/desktop'); ?>
+    <?= $this->include('/layouts/navigation-bar/mobile-device'); ?>
 
 
     <!-- bagian isi dari tiap halaman -->

@@ -2,8 +2,9 @@
 
 namespace App\Controllers;
 
-use App\Models\DaftarGame_Model;
-use App\Models\KategoriGame_Model;
+
+
+use CodeIgniter\I18n\Time;
 
 class KanalGame extends BaseController
 {
@@ -11,13 +12,12 @@ class KanalGame extends BaseController
     protected $genre_game;
     public function __construct()
     {
-        $this->daftar_game = new DaftarGame_Model();
-        $this->genre_game = new KategoriGame_Model();
     }
 
     // method yang pertama kali dipanggil oleh Routes
     public function index()
     {
+        // $this->cachePage(300);
         $data = [
             'title_bar' => 'Home'
         ];
@@ -25,12 +25,32 @@ class KanalGame extends BaseController
         return view('pages/homepage', $data);
     }
 
+    public function details($slugs)
+    {
+        $data = [
+            'title_bar' => ''
+        ];
+    }
+
+    public function downloads()
+    {
+        $data = [
+            'title_bar' => 'Download Game'
+        ];
+
+        return view('pages/downloads', $data);
+    }
+
     public function save_suggested()
     {
+        $separator = '-';
+        $lowercase = TRUE;
         $game_title = "";
-        $slugs = url_title($game_title, $pemisah = '-', true);
+        $record_added = Time::now('Asia/Jakarta', 'en_US');
+        $record_updated = Time::now('Asia/Jakarta', 'en_US');
+        $slugs = url_title($game_title, $separator, $lowercase);
 
-        $container = [];
+        $saveData = [];
     }
 
     public function suggest()
