@@ -8,8 +8,41 @@ $comments = $callModel->findAll();
     <div class="uk-text-center">
         <h3 class="">Saran.</h3>
         <h4 class="uk-text-meta">Kirimkan game kesukaan / saran untuk website ini!</h4>
-        <a href="#suggestion" class="uk-button uk-button-default">Klik disini</a>
+        <!-- tombol untuk menuju ke section yang diinginkan -->
+        <div class="button-section">
+            <div class="button-inner-section">
+                <a href="#suggest_something" class="uk-button uk-button-default ">
+                    <i class="ri-file-edit-fill" style="font-size: 24px;"></i>
+                    Saran,dong!
+                </a>
+                <a href="#viewers_comments" class="uk-button uk-button-default">
+                    <i class="ri-eye-fill" style="font-size: 24px;"></i>
+                    Lihat Kiriman
+                </a>
+            </div>
+        </div>
+
     </div>
+</div>
+<div class="uk-container uk-margin uk-form-stacked" id="suggest_something">
+    <form>
+        <?= csrf_field(); ?>
+        <fieldset class="uk-fieldset">
+
+            <legend class="uk-legend">Legend</legend>
+
+            <div class="uk-margin">
+                <input class="uk-input" type="text" placeholder="Input">
+            </div>
+
+            <div class="uk-margin">
+                <textarea class="uk-textarea" rows="5" placeholder="Textarea"></textarea>
+            </div>
+
+
+
+        </fieldset>
+    </form>
 </div>
 <!-- container untuk menampung komentar yang ditampilkan -->
 <div class="uk-container uk-margin-large">
@@ -40,22 +73,5 @@ $comments = $callModel->findAll();
             </div>
         </div>
     <?php endforeach; ?>
-</div>
-<div class="uk-container uk-margin uk-form-stacked" id="suggestion">
-    <form action="" method="post">
-        <?= csrf_field(); ?>
-        <legend class="uk-legend uk-text-uppercase uk-text-center">Saran kalian</legend>
-
-        <div class="uk-margin">
-            <label for="form-stacked-text" class="uk-form-label">Nama</label>
-            <div class="uk-form-controls">
-                <input type="text" name="nama-pengunjung" id="form-stacked-text" class="uk-input" placeholder="isi nama disini">
-            </div>
-        </div>
-
-        <div class="uk-margin">
-            <label for=""></label>
-        </div>
-    </form>
 </div>
 <?= $this->endSection(); ?>

@@ -127,9 +127,9 @@
     <!-- bagian isi dari tiap halaman -->
     <?= $this->renderSection('content'); ?>
 
-    <script>
+    <!-- footer -->
+    <?= $this->include('/layouts/footer'); ?>
 
-    </script>
 
     <!-- js using Materialize JS -->
     <script src="/js/materialize.min.js" async="false">
@@ -141,8 +141,8 @@
     <script src="/js/uikit-icons.min.js" async="false"></script>
 
     <!-- Ion Icon -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
 
 </body>
 
