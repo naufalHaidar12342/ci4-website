@@ -4,18 +4,19 @@
 $callModel = new ('App\Models\KirimanPengunjungModel');
 $comments = $callModel->findAll();
 ?>
-<div class="uk-container uk-margin-large ">
+<section id="top_section"></section>
+<div class="uk-container uk-margin-large">
     <div class="uk-text-center">
         <h3 class="">Saran.</h3>
         <h4 class="uk-text-meta">Kirimkan game kesukaan / saran untuk website ini!</h4>
         <!-- tombol untuk menuju ke section yang diinginkan -->
         <div class="button-section">
             <div class="button-inner-section">
-                <a href="#suggest_something" class="uk-button uk-button-default ">
+                <a href="#suggest_something" class="uk-button uk-button-default uk-text-decoration-none ">
                     <i class="ri-file-edit-fill" style="font-size: 24px;"></i>
                     Saran,dong!
                 </a>
-                <a href="#viewers_comments" class="uk-button uk-button-default">
+                <a href="#viewers_comments" class="uk-button uk-button-default uk-text-decoration-none">
                     <i class="ri-eye-fill" style="font-size: 24px;"></i>
                     Lihat Kiriman
                 </a>
@@ -73,5 +74,14 @@ $comments = $callModel->findAll();
             </div>
         </div>
     <?php endforeach; ?>
+    <!-- tombol untuk kembali ke atas -->
+    <div class="uk-text-center">
+        <a href="#top_section" class="uk-button uk-button-default">
+            <i class="fas fa-angle-double-up"></i>
+            Ke Atas
+        </a>
+    </div>
 </div>
+
+
 <?= $this->endSection(); ?>

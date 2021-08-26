@@ -1,7 +1,7 @@
 <nav uk-sticky>
     <div class="nav-wrapper" style="height: 66px !important;">
         <!-- hamburger menu untuk mobile device -->
-        <a class="uk-button uk-hidden@m waves-effect waves-light" style="text-decoration: none; background-color: rgb(112, 128, 144, 0.15);" uk-toggle="target: #offcanvas-reveal">
+        <a class="uk-button-link uk-hidden@m waves-effect waves-light" style="text-decoration: none; background-color: rgb(112, 128, 144, 0.15);" uk-toggle="target: #offcanvas-reveal">
             <i class="material-icons">
                 menu
             </i>

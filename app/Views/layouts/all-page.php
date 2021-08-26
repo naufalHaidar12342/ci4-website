@@ -17,7 +17,7 @@
 
     <!-- akan menerima kiriman key bernama'title_bar' milik array. dikirim
     oleh controller -->
-    <title>Kanal Game || <?= $title_bar; ?></title>
+    <title>Kanal Game | <?= $title_bar; ?></title>
 
     <!-- font family from Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -130,15 +130,16 @@
     <!-- footer -->
     <?= $this->include('/layouts/footer'); ?>
 
-
+    <!-- custom script -->
+    <!-- <script src="/js/mystyle.js" async="true"></script> -->
     <!-- js using Materialize JS -->
-    <script src="/js/materialize.min.js" async="false">
+    <script src="/js/materialize.min.js" async="true">
     </script>
 
     <!-- UI Kit js -->
-    <script src="/js/uikit.min.js" async="false"></script>
+    <script src="/js/uikit.min.js" async="true"></script>
 
-    <script src="/js/uikit-icons.min.js" async="false"></script>
+    <script src="/js/uikit-icons.min.js" async="true"></script>
 
     <!-- Ion Icon -->
     <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
