@@ -23,11 +23,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <!-- css using Materialize CSS -->
-    <link rel="stylesheet" href="/css/materialize.min.css">
-
     <!-- UI Kit css -->
     <link rel="stylesheet" href="/css/uikit.min.css">
+
+    <!-- css using Materialize CSS -->
+    <link rel="stylesheet" href="/css/materialize.min.css">
 
     <!-- material icon by Google Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" crossorigin="anonymous">
@@ -139,6 +139,7 @@
     <!-- UI Kit js -->
     <script src="/js/uikit.min.js" async="true"></script>
 
+    <!-- UI Kit icon  -->
     <script src="/js/uikit-icons.min.js" async="true"></script>
 
     <!-- Ion Icon -->

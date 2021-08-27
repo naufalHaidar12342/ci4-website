@@ -2,16 +2,17 @@
 
 namespace App\Controllers;
 
-
-
+use App\Models\KirimanPengunjungModel;
 use CodeIgniter\I18n\Time;
 
 class KanalGame extends BaseController
 {
     protected $daftar_game;
     protected $genre_game;
+    protected $savePost;
     public function __construct()
     {
+        $this->savePost = new KirimanPengunjungModel();
     }
 
     // method yang pertama kali dipanggil oleh Routes
@@ -41,22 +42,36 @@ class KanalGame extends BaseController
         return view('pages/downloads', $data);
     }
 
-    public function save_suggested()
+    public function save()
     {
-        $separator = '-';
-        $lowercase = TRUE;
-        $game_title = "";
-        $record_added = Time::now('Asia/Jakarta', 'en_US');
-        $record_updated = Time::now('Asia/Jakarta', 'en_US');
-        $slugs = url_title($game_title, $separator, $lowercase);
+        if (!$this->validate([
+            'pengunjung' => 'required',
+            'komentar_saran' => 'required',
+        ])) {
+            $validation = \Config\Services::validation();
+            return redirect()->to('/KanalGame/suggest')->withInput()->with('validation', $validation);
+        }
 
-        $saveData = [];
+        $saveData = [
+            'nama_pengunjung' => $this->request->getVar('pengunjung'),
+            'komentar_kiriman' => $this->request->getVar('komentar-saran'),
+
+        ];
+        // menyimpan data ke dalam tabel
+        $this->savePost->save($saveData);
+
+        //flash message (pesan sekilas)
+        session()->setFlashData('success', 'Komentar kamu berhasil dikirim!');
+
+        return redirect()->to('/KanalGame/suggest');
     }
 
     public function suggest()
     {
+        session();
         $data = [
-            'title_bar' => 'Suggest A Game!'
+            'title_bar' => 'Suggest A Game!',
+            'validation' => \Config\Services::validation()
         ];
         return view('pages/suggest-game', $data);
     }

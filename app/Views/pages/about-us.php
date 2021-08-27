@@ -34,13 +34,13 @@
     <div class="uk-child-width-1-2@m" uk-grid>
         <div class="col s12 m7">
             <div class="card horizontal">
-                <div class="card-image">
-                    <img src="https://lorempixel.com/100/190/nature/6" class="responsive-img">
+                <div class="card-image" style="color: none;">
+                    <img src=" /img/profiles/DSC_0491.webp" width="100%" height="100%" style="object-fit: fill;" class="responsive-img">
 
                 </div>
                 <div class="card-stacked">
                     <div class="card-content">
-                        <h3 class="card-title">Hello</h3>
+                        <h3 class="card-title">Naufal Haidar</h3>
 
                         <p>I am a very simple card. I am good at containing small bits of information.</p>
                     </div>
@@ -51,12 +51,12 @@
         <div class="col s12 m7">
             <div class="card horizontal">
                 <div class="card-image">
-                    <img src="https://lorempixel.com/100/190/nature/6" class="responsive-img">
+                    <img src="/img/profiles/ardhayudhatama.webp" width="100%" height="100%" class="uk-responsive-height uk-responsive-width">
 
                 </div>
                 <div class="card-stacked">
                     <div class="card-content">
-                        <h3 class="card-title">Horizontal Card</h3>
+                        <h3 class="card-title">Yudhatama Ardha</h3>
                         <p>I am a very simple card. I am good at containing small bits of information.</p>
                     </div>
 

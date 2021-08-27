@@ -64,13 +64,14 @@ $selectGame = $callModel->findAll();
 
                         <p uk-margin>
 
-
+                            <!-- memeriksa apakah link steam tersedia -->
                             <?php if ($download['steam'] !== '') : ?>
                                 <a href="<?= htmlspecialchars($download['steam'], ENT_HTML5, 'UTF-8'); ?>" class="uk-button uk-margin-right uk-box-shadow-medium light-blue darken-2 waves-effect" target="_blank" rel="noreferrer" style=" color: white; border-radius: 16px;text-decoration:none;">
                                     <i class="fab fa-steam"></i>
                                     Steam
                                 </a>
                             <?php endif; ?>
+                            <!-- memeriksa apakah link epic games tersedia -->
                             <?php if ($download['epicgames_store'] !== '') : ?>
                                 <a href="<?= htmlspecialchars($download['epicgames_store'], ENT_HTML5, 'UTF-8'); ?>" class="uk-button waves-effect waves-light " target="_blank" rel="noreferrer" style=" color: white; background-color: #2a2a2a; border-radius: 16px; text-decoration: none;">
                                     <img src="/img/epic_logo_filled_white.png" alt="Epic Game Logo" width="24" height="24">

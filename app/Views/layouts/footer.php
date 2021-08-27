@@ -15,7 +15,7 @@
                 <p></p>
             </div>
             <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
+                <!-- <h5 class="white-text">Links</h5> -->
                 <ul class="uk-list">
                     <li>
                         <a class="white-text uk-button uk-button-text uk-uk-text-decoration-none uk-text-default" href="<?= base_url(); ?>/" style="text-transform: none !important;">
@@ -23,26 +23,18 @@
                         </a>
                     </li>
                     <li>
-                        <a class="grey-text text-lighten-3" href="#!" style="text-transform: none !important;">
+                        <a class="grey-text text-lighten-3" href="<?= base_url(); ?>/kanal-game/about-us" style="text-transform: none !important;">
                             About
                         </a>
                     </li>
-                    <li>
-                        <a class="grey-text text-lighten-3" href="#!" style="text-transform: none !important;">
-                            GitHub
-                        </a>
-                    </li>
-                    <li><a class="grey-text text-lighten-3" href="#!" style="text-transform: none !important;">
-                            Link 4
-                        </a>
-                    </li>
+
                 </ul>
             </div>
         </div>
     </div>
     <div class="footer-copyright">
         <div class="container">
-            <h4 class="white-text">
+            <h5 class="white-text">
                 <img src="/img/collaboration.svg" alt="" width="
                 24" height="24">
                 A collab between <a href="https://github.com/naufalHaidar12342" class="white-text uk-button-text  uk-text-decoration-none" target="_blank" rel="noreferrer">
@@ -52,7 +44,7 @@
                 <a href="https://github.com/devardha" class="white-text uk-button-text  uk-text-decoration-none" target="_blank" rel="noreferrer">
                     ardhayudatama
                 </a>.
-            </h4>
+            </h5>
 
 
         </div>

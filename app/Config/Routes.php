@@ -36,6 +36,7 @@ $routes->get('/', 'KanalGame::index');
 $routes->get('/kanal-game/suggest', 'KanalGame::suggest');
 $routes->get('/kanal-game/about-us', 'KanalGame::about_us');
 $routes->get('/kanal-game/download', 'KanalGame::downloads');
+
 // $routes->get('/kanal-game/(:segment)/', 'KanalGame::details/$1');
 
 /*

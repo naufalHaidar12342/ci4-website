@@ -25,19 +25,34 @@ $comments = $callModel->findAll();
 
     </div>
 </div>
+
 <div class="uk-container uk-margin uk-form-stacked" id="suggest_something">
-    <form>
+
+    <form action="/KanalGame/save" method="POST">
         <?= csrf_field(); ?>
         <fieldset class="uk-fieldset">
 
-            <legend class="uk-legend">Legend</legend>
+            <legend class="uk-legend uk-text-center">Saran/Komentar</legend>
+            <?php if (session()->getFlashData('success')) : ?>
+                <div class="uk-alert-success uk-margin uk-border-rounded" uk-alert>
+                    <a class="uk-alert-close" uk-close></a>
+                    <p><?= session()->getFlashData('success'); ?></p>
+                </div>
+            <?php endif; ?>
+
 
             <div class="uk-margin">
-                <input class="uk-input" type="text" placeholder="Input">
+                <input class="uk-input  <?= ($validation->hasError('pengunjung')) ? 'uk-form-danger' : ''; ?>" type="text" placeholder="<?= ($validation->hasError('pengunjung') ? $validation->getError('pengunjung') : 'Isi nama kalian disini,ya!'); ?>" name="pengunjung">
             </div>
 
             <div class="uk-margin">
-                <textarea class="uk-textarea" rows="5" placeholder="Textarea"></textarea>
+                <textarea class="uk-textarea uk-border-rounded <?= ($validation->hasError('komentar_saran')) ? 'uk-form-danger' : ''; ?>" rows="5" placeholder="<?= ($validation->hasError('komentar_saran') ? $validation->getError('komentar_saran') : 'Isi nama kalian disini,ya!'); ?>" name="komentar_saran">  </textarea>
+            </div>
+            <div class="uk-margin">
+                <button type="submit" class="uk-button">
+                    <i class="ri-send-plane-fill"></i>
+                    Kirimkan
+                </button>
             </div>
 
 
@@ -46,7 +61,7 @@ $comments = $callModel->findAll();
     </form>
 </div>
 <!-- container untuk menampung komentar yang ditampilkan -->
-<div class="uk-container uk-margin-large">
+<div class="uk-container uk-margin-large" id="viewers_comments">
     <?php foreach ($comments as $comment) : ?>
         <div class="uk-card uk-card-default uk-margin-medium">
             <div class="uk-card-header">
