@@ -1,27 +1,50 @@
-.steam-download {
-    color: white;
-    border-radius: 16px;
-    text-decoration: none;
+.devs-about-container {
+    display: flex;
+    justify-content: space-between;
 }
 
-.egs-download {
-    color: white;
-    background-color: #2a2a2a;
-    border-radius: 16px;
-    text-decoration: none;
+.devs-about-container .devs-about-card {
+    width: 45%;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 8%);
+    padding: 1rem;
 }
 
-.download-button {
-    border-radius: 16px;
+.about-dev-header .dev-image {
+    width: 60px;
+    height: 60px;
+    background: #ddd;
+    border-radius: 50%;
+    margin-right: 12px;
 }
 
-.container-about-1 {
-    padding-bottom: 3rem !important;
-    padding-top: 3rem !important;
-    max-width: 960px;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+.dev-image {
+    width: 60px;
+    height: 60px;
+    background: #ddd;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.about-dev-header {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .devs-about-container {
+        flex-direction: column;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .devs-about-container .devs-about-card {
+        padding: 0;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .about-dev-header {
+        padding: 0 0.5rem;
+    }
+    .about-dev-body {
+        padding: 0 0.5rem;
+    }
 }

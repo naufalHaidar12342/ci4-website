@@ -1,13 +1,10 @@
 <?= $this->extend('/layouts/all-page'); ?>
 <?= $this->section('content'); ?>
-<?php
-$callModel = new ('App\Models\KirimanPengunjungModel');
-$comments = $callModel->findAll();
-?>
+
 <section id="top_section"></section>
-<div class="uk-container uk-margin-large">
+<div class="uk-container uk-margin-medium">
     <div class="uk-text-center">
-        <h3 class="">Saran.</h3>
+        <h4 class="">Saran.</h4>
         <h4 class="uk-text-meta">Kirimkan game kesukaan / saran untuk website ini!</h4>
         <!-- tombol untuk menuju ke section yang diinginkan -->
         <div class="button-section">
@@ -28,12 +25,12 @@ $comments = $callModel->findAll();
 
 <div class="uk-container uk-margin uk-form-stacked" id="suggest_something">
 
-    <form action="/KanalGame/save" method="POST">
+    <form action="/kanal-game/save" method="POST">
         <?= csrf_field(); ?>
         <fieldset class="uk-fieldset">
 
             <legend class="uk-legend uk-text-center">Saran/Komentar</legend>
-            <!-- alert ketika berhasil mengirim komentar -->
+            <!-- alert ketika berhasil mengirim -->
             <?php if (session()->getFlashData('success')) : ?>
                 <div class="uk-alert-success uk-margin uk-border-rounded" uk-alert>
                     <a class="uk-alert-close" uk-close></a>
@@ -43,11 +40,17 @@ $comments = $callModel->findAll();
 
 
             <div class="uk-margin">
-                <input class="uk-input  <?= ($validation->hasError('pengunjung')) ? 'uk-form-danger' : ''; ?>" type="text" placeholder="<?= ($validation->hasError('pengunjung') ? $validation->getError('pengunjung') : 'Isi nama kalian disini,ya!'); ?>" name="pengunjung">
+                <input class="uk-input  <?= ($validation->hasError('pengunjung')) ? 'uk-form-danger' : ''; ?>" type="text" placeholder="Isi nama kalian disini, ya!" name="pengunjung" value="<?= old('pengunjung'); ?>">
+                <?php if ($validation->hasError('pengunjung')) : ?>
+                    <label for="" class="uk-text-danger"><?= $validation->getError('pengunjung'); ?></label>
+                <?php endif; ?>
             </div>
 
             <div class="uk-margin">
-                <textarea class="uk-textarea uk-border-rounded <?= ($validation->hasError('komentar_saran')) ? 'uk-form-danger' : ''; ?>" rows="5" placeholder="<?= ($validation->hasError('komentar_saran') ? $validation->getError('komentar_saran') : 'Isi nama kalian disini,ya!'); ?>" name="komentar_saran"></textarea>
+                <textarea class="uk-textarea uk-border-rounded <?= ($validation->hasError('komentar_saran')) ? 'uk-form-danger' : ''; ?>" rows="5" placeholder="Isi komentar kalian disini,ya!" name="komentar_saran"><?= old('komentar_saran'); ?></textarea>
+                <?php if ($validation->hasError('komentar_saran')) : ?>
+                    <label for="" class="uk-text-danger"><?= $validation->getError('komentar_saran'); ?></label>
+                <?php endif; ?>
             </div>
             <div class="uk-margin">
                 <button type="submit" class="uk-button">
@@ -62,41 +65,55 @@ $comments = $callModel->findAll();
     </form>
 </div>
 <!-- container untuk menampung komentar yang ditampilkan -->
-<div class="uk-container uk-margin-large" id="viewers_comments">
-    <?php foreach ($comments as $comment) : ?>
-        <div class="uk-card uk-card-default uk-margin-medium">
-            <div class="uk-card-header">
-                <div class="uk-grid-small uk-flex-middle" uk-grid>
-                    <div class="uk-width-auto">
-                        <img class="uk-border-circle" width="50" height="50" src="/img/profile-user.svg">
+<!-- komentar dikirim dari controller. -->
+<div class="uk-container uk-margin" id="viewers_comments">
+    <div class="uk-text-center uk-margin-medium-bottom">
+        <h4> Comments.</h4>
+
+    </div>
+
+    <div class="uk-child-width-1-3@m" uk-grid>
+
+        <!-- memanggil key dari array bernama '$comments' -->
+        <?php foreach ($comments as $comment) : ?>
+            <div>
+
+                <div class="uk-card uk-card-default uk-card-small uk-margin-medium">
+                    <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                            <div class="uk-width-auto">
+                                <img class="uk-border-circle" width="40" height="40" src="/img/profile-user.svg">
+                            </div>
+                            <div class="uk-width-expand">
+                                <h3 class="uk-card-title uk-margin-remove-bottom">
+                                    <?= htmlspecialchars($comment['nama_pengunjung'], ENT_QUOTES, 'UTF-8'); ?>
+                                </h3>
+                                <p class="uk-text-meta uk-margin-remove-top">
+                                    <?php $convertTimestamp = strtotime($comment['ditambahkan_pada']); ?>
+                                    <?php $convertDate = date('d-F-Y H:i:s e:P', $convertTimestamp); ?>
+                                    mengomentari pada <?= htmlspecialchars($convertDate, ENT_HTML5, 'UTF-8'); ?>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="uk-width-expand">
-                        <h3 class="uk-card-title uk-margin-remove-bottom">
-                            <?= htmlspecialchars($comment['nama_pengunjung'], ENT_QUOTES, 'UTF-8'); ?>
-                        </h3>
-                        <p class="uk-text-meta uk-margin-remove-top">
-                            <?php $convertTimestamp = strtotime($comment['ditambahkan_pada']); ?>
-                            <?php $convertDate = date('d-F-Y H:i:s e:P', $convertTimestamp); ?>
-                            mengomentari pada <?= htmlspecialchars($convertDate, ENT_HTML5, 'UTF-8'); ?>
+                    <div class="uk-card-body">
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p> -->
+                        <p>
+                            <?= htmlspecialchars($comment['komentar_kiriman'], ENT_QUOTES, 'UTF-8'); ?>
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="uk-card-body">
-                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p> -->
-                <p>
-                    <?= htmlspecialchars($comment['komentar_kiriman'], ENT_QUOTES, 'UTF-8'); ?>
-                </p>
-            </div>
-        </div>
-    <?php endforeach; ?>
-    <!-- tombol untuk kembali ke atas -->
-    <div class="uk-text-center">
-        <a href="#top_section" class="uk-button uk-button-default">
-            <i class="fas fa-angle-double-up"></i>
-            Ke Atas
-        </a>
+        <?php endforeach; ?>
     </div>
+
+    <div class="uk-text-center uk-margin-medium">
+        <!-- parameternya : nama array key yang dikirim oleh controller, nama grup/array key
+    yang kita tambahkan di app\Config\Pager , tepatnya pada array $templates-->
+        <?= $pager->links('comments', 'comments_pagination'); ?>
+
+    </div>
+
 </div>
 
 

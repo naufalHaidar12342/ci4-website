@@ -1,4 +1,4 @@
-<footer class="page-footer" style="background-color:#3a4856 ;">
+<footer class="page-footer" style="background-color:#3a4856 ;" uk-sticky="bottom: true">
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
@@ -7,15 +7,9 @@
                 <!-- brand logo/nama website -->
                 <a href="<?= base_url(); ?>/" class="brand-logo" style="font-family: 'Press Start 2P', cursive; text-transform: uppercase;letter-spacing: 2px; font-size: 20px; color: inherit; text-decoration: none;  vertical-align: middle !important; text-align: center !important;">
                     KanalGame
-                    <!-- <i class="material-icons md-24 ">
-                        sports_esports
-                    </i> -->
-
                 </a>
-                <p></p>
             </div>
             <div class="col l4 offset-l2 s12">
-                <!-- <h5 class="white-text">Links</h5> -->
                 <ul class="uk-list">
                     <li>
                         <a class="white-text uk-button uk-button-text uk-uk-text-decoration-none uk-text-default" href="<?= base_url(); ?>/" style="text-transform: none !important;">

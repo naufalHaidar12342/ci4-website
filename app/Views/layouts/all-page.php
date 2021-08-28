@@ -25,7 +25,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Press+Start+2P&display=swap" rel="stylesheet">
     <!-- UI Kit css -->
     <link rel="stylesheet" href="/css/uikit.min.css">
-
+    <!-- custom styling css -->
+    <link rel="stylesheet" href="/css/custom-styling.css">
     <!-- css using Materialize CSS -->
     <link rel="stylesheet" href="/css/materialize.min.css">
 
@@ -120,17 +121,6 @@
 
         .download-button {
             border-radius: 16px;
-        }
-
-        .container-about-1 {
-            padding-bottom: 3rem !important;
-            padding-top: 3rem !important;
-            max-width: 960px;
-            width: 100%;
-            padding-right: 15px;
-            padding-left: 15px;
-            margin-right: auto;
-            margin-left: auto;
         }
     </style>
 

@@ -2,14 +2,10 @@
 
 <?= $this->section('content'); ?>
 
-<?php
-$callModel = new ('App\Models\PostsModel');
-$selectGame = $callModel->findAll();
-?>
-
+<!-- menangkap data yang dikirim oleh controller -->
 <div class="uk-container uk-margin-large">
     <div class="uk-child-width-1-2@m" uk-grid>
-        <?php foreach ($selectGame as $download) : ?>
+        <?php foreach ($show_game as $download) : ?>
             <div>
                 <!-- card untuk tiap game-->
                 <div class="uk-card uk-card-hover uk-card-default">

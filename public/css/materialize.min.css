@@ -2546,7 +2546,7 @@ video.responsive-video {
     border-radius: 2px;
     text-align: center;
     vertical-align: top;
-    height: 30px;
+    height: 100%;
 }
 
 .pagination li a {
@@ -2562,7 +2562,7 @@ video.responsive-video {
 }
 
 .pagination li.active {
-    background-color: #ee6e73;
+    background-color: #3a4856;
 }
 
 .pagination li.disabled a {

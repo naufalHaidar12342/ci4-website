@@ -30,80 +30,47 @@
         <h3> Meet The Devs</h3>
         <h3 class="uk-text-meta">Kenali sosok di balik hadirnya website ini.</h3>
     </div>
+    <?= $this->include('/layouts/about-devs'); ?>
 
-    <div class="uk-child-width-1-2@m" uk-grid>
-        <div class="col s12 m7">
-            <div class="card horizontal">
-                <div class="card-image" style="color: none;">
-                    <img src=" /img/profiles/DSC_0491.webp" width="100%" height="100%" style="object-fit: fill;" class="responsive-img">
-
-                </div>
-                <div class="card-stacked">
-                    <div class="card-content">
-                        <h3 class="card-title">Naufal Haidar</h3>
-
-                        <p>I am a very simple card. I am good at containing small bits of information.</p>
-                    </div>
-
-                </div>
-            </div>
+    <?php
+    $callModel = new ('App\Models\TeknologiModel');
+    $techs = $callModel->findAll();
+    ?>
+    <!-- section milik teknologi yang digunakan website -->
+    <div class="uk-container uk-margin-large">
+        <div class="uk-text-center uk-margin-medium-bottom">
+            <h3>Technologies</h3>
+            <h3 class="uk-text-meta">
+                Teknologi yang digunakan dalam membangun website ini.
+            </h3>
         </div>
-        <div class="col s12 m7">
-            <div class="card horizontal">
-                <div class="card-image">
-                    <img src="/img/profiles/ardhayudhatama.webp" width="100%" height="100%" class="uk-responsive-height uk-responsive-width">
+        <div class="uk-child-width-1-4@m" uk-grid>
+            <?php foreach ($techs as $technology) : ?>
+                <div>
+                    <div class="uk-card uk-card-hover uk-card-default uk-border-rounded">
+                        <!-- cover picture milik game -->
+                        <div class="uk-card-media-top">
+                            <img src="/img/technologies/<?= htmlspecialchars($technology['logo'], ENT_QUOTES, 'UTF-8'); ?>" alt="" width="100%" height="100%" uk-img style="border-radius: 10px;">
+                        </div>
 
-                </div>
-                <div class="card-stacked">
-                    <div class="card-content">
-                        <h3 class="card-title">Yudhatama Ardha</h3>
-                        <p>I am a very simple card. I am good at containing small bits of information.</p>
-                    </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">
+                                <?= htmlspecialchars($technology['nama_teknologi'], ENT_QUOTES, 'UTF-8'); ?>
+                            </h3>
 
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<?php
-$callModel = new ('App\Models\TeknologiModel');
-$techs = $callModel->findAll();
-?>
-<!-- section milik teknologi yang digunakan website -->
-<div class="uk-container uk-margin-large">
-    <div class="uk-text-center uk-margin-medium-bottom">
-        <h3>Technologies</h3>
-        <h3 class="uk-text-meta">
-            Teknologi yang digunakan dalam membangun website ini.
-        </h3>
-    </div>
-    <div class="uk-child-width-1-4@m" uk-grid>
-        <?php foreach ($techs as $technology) : ?>
-            <div>
-                <div class="uk-card uk-card-hover uk-card-default uk-border-rounded">
-                    <!-- cover picture milik game -->
-                    <div class="uk-card-media-top">
-                        <img src="/img/technologies/<?= htmlspecialchars($technology['logo'], ENT_QUOTES, 'UTF-8'); ?>" alt="" width="100%" height="100%" uk-img style="border-radius: 10px;">
-                    </div>
-
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">
-                            <?= htmlspecialchars($technology['nama_teknologi'], ENT_QUOTES, 'UTF-8'); ?>
-                        </h3>
-
-                        <p uk-margin>
-                            <?= htmlspecialchars($technology['deskripsi_singkat'], ENT_HTML5, 'UTF-8'); ?>
-                        </p>
+                            <p uk-margin>
+                                <?= htmlspecialchars($technology['deskripsi_singkat'], ENT_HTML5, 'UTF-8'); ?>
+                            </p>
 
 
-                        <div class="uk-card-footer uk-margin">
-                            <a href="<?= htmlspecialchars($technology['link_belajar'], ENT_HTML5, 'UTF-8'); ?>" class="uk-button uk-button-text" target="_blank" rel="noreferrer">Learn More</a>
+                            <div class="uk-card-footer uk-margin">
+                                <a href="<?= htmlspecialchars($technology['link_belajar'], ENT_HTML5, 'UTF-8'); ?>" class="uk-button uk-button-text" target="_blank" rel="noreferrer">Learn More</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+        </div>
     </div>
 </div>
 <?= $this->endSection(); ?>

@@ -2,13 +2,11 @@
 
 <?= $this->section('content'); ?>
 
-<?php
-$callModel = new ('App\Models\PostsModel');
-$selectGame = $callModel->findAll();
-?>
+<!-- menangkap data yang dikirim oleh controller -->
 <div class="uk-container uk-margin-large">
     <div class="uk-child-width-1-3@m" uk-grid>
-        <?php foreach ($selectGame as $game) : ?>
+        <!-- mengakses key dari assoc array bernama  '$show_game' -->
+        <?php foreach ($show_game as $game) : ?>
             <div>
                 <div class="uk-card uk-card-hover uk-card-default uk-border-rounded">
                     <!-- cover picture milik game -->
