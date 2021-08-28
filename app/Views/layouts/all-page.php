@@ -52,6 +52,46 @@
     <!-- #3a4856-->
     <!-- #8dafce-->
     <style>
+        /* press-start-2p-regular - latin */
+        @font-face {
+            font-family: 'Press Start 2P';
+            font-style: normal;
+            font-weight: 400;
+            src: url('/fonts/press-start-2p-v9-latin-regular.eot');
+            /* IE9 Compat Modes */
+            src: local(''),
+                url('/fonts/press-start-2p-v9-latin-regular.eot?#iefix') format('embedded-opentype'),
+                /* IE6-IE8 */
+                url('/fonts/press-start-2p-v9-latin-regular.woff2') format('woff2'),
+                /* Super Modern Browsers */
+                url('/fonts/press-start-2p-v9-latin-regular.woff') format('woff'),
+                /* Modern Browsers */
+                url('/fonts/press-start-2p-v9-latin-regular.ttf') format('truetype'),
+                /* Safari, Android, iOS */
+                url('/fonts/press-start-2p-v9-latin-regular.svg#PressStart2P') format('svg');
+            /* Legacy iOS */
+        }
+
+        /* barlow-condensed-500 - latin */
+        @font-face {
+            font-family: 'Barlow Condensed';
+            font-style: normal;
+            font-weight: 500;
+            src: url('/fonts/barlow-condensed-v5-latin-500.eot');
+            /* IE9 Compat Modes */
+            src: local(''),
+                url('/fonts/barlow-condensed-v5-latin-500.eot?#iefix') format('embedded-opentype'),
+                /* IE6-IE8 */
+                url('/fonts/barlow-condensed-v5-latin-500.woff2') format('woff2'),
+                /* Super Modern Browsers */
+                url('/fonts/barlow-condensed-v5-latin-500.woff') format('woff'),
+                /* Modern Browsers */
+                url('/fonts/barlow-condensed-v5-latin-500.ttf') format('truetype'),
+                /* Safari, Android, iOS */
+                url('/fonts/barlow-condensed-v5-latin-500.svg#BarlowCondensed') format('svg');
+            /* Legacy iOS */
+        }
+
         .button-section {
             display: flex;
             justify-content: center;
@@ -75,30 +115,8 @@
                 flex-direction: column;
             }
 
-
-
         }
 
-        @font-face {
-            font-family: sans-serif;
-            font-style: normal;
-            font-weight: 500;
-            src: url(''), local();
-        }
-
-        .steam-download {
-            color: white;
-            border-radius: 16px;
-            text-decoration: none;
-
-        }
-
-        .egs-download {
-            color: white;
-            background-color: #2a2a2a;
-            border-radius: 16px;
-            text-decoration: none;
-        }
 
         .download-button {
             border-radius: 16px;

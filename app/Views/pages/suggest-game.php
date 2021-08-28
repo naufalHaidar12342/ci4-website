@@ -33,6 +33,7 @@ $comments = $callModel->findAll();
         <fieldset class="uk-fieldset">
 
             <legend class="uk-legend uk-text-center">Saran/Komentar</legend>
+            <!-- alert ketika berhasil mengirim komentar -->
             <?php if (session()->getFlashData('success')) : ?>
                 <div class="uk-alert-success uk-margin uk-border-rounded" uk-alert>
                     <a class="uk-alert-close" uk-close></a>
@@ -46,7 +47,7 @@ $comments = $callModel->findAll();
             </div>
 
             <div class="uk-margin">
-                <textarea class="uk-textarea uk-border-rounded <?= ($validation->hasError('komentar_saran')) ? 'uk-form-danger' : ''; ?>" rows="5" placeholder="<?= ($validation->hasError('komentar_saran') ? $validation->getError('komentar_saran') : 'Isi nama kalian disini,ya!'); ?>" name="komentar_saran">  </textarea>
+                <textarea class="uk-textarea uk-border-rounded <?= ($validation->hasError('komentar_saran')) ? 'uk-form-danger' : ''; ?>" rows="5" placeholder="<?= ($validation->hasError('komentar_saran') ? $validation->getError('komentar_saran') : 'Isi nama kalian disini,ya!'); ?>" name="komentar_saran"></textarea>
             </div>
             <div class="uk-margin">
                 <button type="submit" class="uk-button">

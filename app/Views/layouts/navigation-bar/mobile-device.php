@@ -1,8 +1,9 @@
 <!-- navbar mobile -->
 <div id="offcanvas-reveal" uk-offcanvas=" mode:reveal; overlay: true">
-    <div class="uk-offcanvas-bar" style="background-color:#3a4856; border-radius: 0px 0px 0px 0px;">
+    <div class="uk-offcanvas-bar" style="background-color:#3a4856;">
+
         <!-- tombol close -->
-        <a class=" uk-offcanvas-close waves-effect" type="button" uk-close style="text-decoration: none;"></a>
+        <button class=" uk-offcanvas-close" type="button" uk-close></button>
 
         <div class="uk-nav uk-nav-default ">
             <ul style="font-family: 'Barlow Condensed', sans-serif; letter-spacing:4px; font-size:16px;">
