@@ -31,7 +31,11 @@
 
             <legend class="uk-legend uk-text-center">Saran/Komentar</legend>
             <!-- alert ketika berhasil mengirim -->
-            <?php if (session()->getFlashData('success')) : ?>
+            <?php
+
+            use CodeIgniter\I18n\Time;
+
+            if (session()->getFlashData('success')) : ?>
                 <div class="uk-alert-success uk-margin uk-border-rounded" uk-alert>
                     <a class="uk-alert-close" uk-close></a>
                     <p><?= session()->getFlashData('success'); ?></p>
@@ -71,6 +75,15 @@
         <h4> Comments.</h4>
 
     </div>
+    <!-- pagination yang akan sembunyi untuk
+    device dengan lebar 960px dan ke atas. akan
+    muncul kalau dibawah 960px -->
+    <div class="uk-text-center uk-margin-medium hide-on-med-and-up">
+        <!-- parameternya : nama array key yang dikirim oleh controller, nama grup/array key
+    yang kita tambahkan di app\Config\Pager , tepatnya pada array $templates-->
+        <?= $pager->links('comments', 'comments_pagination'); ?>
+
+    </div>
 
     <div class="uk-child-width-1-3@m" uk-grid>
 
@@ -89,15 +102,18 @@
                                     <?= htmlspecialchars($comment['nama_pengunjung'], ENT_QUOTES, 'UTF-8'); ?>
                                 </h3>
                                 <p class="uk-text-meta uk-margin-remove-top">
-                                    <?php $convertTimestamp = strtotime($comment['ditambahkan_pada']); ?>
-                                    <?php $convertDate = date('d-F-Y H:i:s e:P', $convertTimestamp); ?>
-                                    mengomentari pada <?= htmlspecialchars($convertDate, ENT_HTML5, 'UTF-8'); ?>
+                                    <?php
+                                    $convert = new Time($comment['ditambahkan_pada'], 'Asia/Jakarta', 'en_US');
+                                    // parameter untuk format() bisa dilihat di
+                                    //https://www.php.net/manual/en/datetime.format.php
+                                    $formatted = $convert->format('d/F/Y G:i:T:P')
+                                    ?>
+                                    mengomentari pada <?= htmlspecialchars($formatted, ENT_HTML5, 'UTF-8'); ?>
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="uk-card-body">
-                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p> -->
                         <p>
                             <?= htmlspecialchars($comment['komentar_kiriman'], ENT_QUOTES, 'UTF-8'); ?>
                         </p>

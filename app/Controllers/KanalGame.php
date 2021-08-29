@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\KirimanPengunjungModel;
 use App\Models\PostsModel;
+use App\Models\TeknologiModel;
 
 
 class KanalGame extends BaseController
@@ -12,10 +13,12 @@ class KanalGame extends BaseController
     protected $genre_game;
     protected $saveComment;
     protected $sitePosts;
+    protected $siteTechs;
     public function __construct()
     {
         $this->saveComment = new KirimanPengunjungModel();
         $this->sitePosts = new PostsModel();
+        $this->siteTechs = new TeknologiModel();
     }
 
     // method yang pertama kali dipanggil oleh Routes
@@ -103,7 +106,8 @@ class KanalGame extends BaseController
     public function about_us()
     {
         $data = [
-            'title_bar' => 'Tentang Kami'
+            'title_bar' => 'Tentang Kami',
+            'techs' => $this->siteTechs->findAll(),
         ];
 
         return view('pages/about-us', $data);

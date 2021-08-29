@@ -25,18 +25,17 @@
 
 
 <!-- section milik developer -->
-<div class="uk-container uk-margin-large" id="developers_section">
+<section id="developers_section"></section>
+<div class="uk-container uk-margin-large">
     <div class="uk-text-center">
         <h3> Meet The Devs</h3>
         <h3 class="uk-text-meta">Kenali sosok di balik hadirnya website ini.</h3>
     </div>
     <?= $this->include('/layouts/about-devs'); ?>
 
-    <?php
-    $callModel = new ('App\Models\TeknologiModel');
-    $techs = $callModel->findAll();
-    ?>
+
     <!-- section milik teknologi yang digunakan website -->
+    <section id="technologies_section"></section>
     <div class="uk-container uk-margin-large">
         <div class="uk-text-center uk-margin-medium-bottom">
             <h3>Technologies</h3>
@@ -44,7 +43,7 @@
                 Teknologi yang digunakan dalam membangun website ini.
             </h3>
         </div>
-        <div class="uk-child-width-1-4@m" uk-grid>
+        <div class="uk-child-width-1-3@m" uk-grid>
             <?php foreach ($techs as $technology) : ?>
                 <div>
                     <div class="uk-card uk-card-hover uk-card-default uk-border-rounded">
