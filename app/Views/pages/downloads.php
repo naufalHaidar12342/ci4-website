@@ -10,7 +10,7 @@
                 <!-- card untuk tiap game-->
                 <div class="uk-card uk-card-hover uk-card-default">
                     <div class="uk-card-media-top">
-                        <img src="/img/story-posts/<?= htmlspecialchars($download['cover_img'], ENT_QUOTES, 'UTF-8'); ?>" style="border-radius: 10px;" alt="" height="100%" width="100%" uk-img>
+                        <img loading="lazy" src="/img/story-posts/<?= htmlspecialchars($download['cover_img'], ENT_QUOTES, 'UTF-8'); ?>" style="border-radius: 10px;" alt="" height="100%" width="100%" uk-img>
                     </div>
                     <div class="uk-card-body">
                         <h3 class="uk-card-title">

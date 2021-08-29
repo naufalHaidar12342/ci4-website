@@ -11,7 +11,7 @@
                 <div class="uk-card uk-card-hover uk-card-default uk-border-rounded">
                     <!-- cover picture milik game -->
                     <div class="uk-card-media-top">
-                        <img src="/img/story-posts/<?= htmlspecialchars($game['cover_img'], ENT_QUOTES, 'UTF-8'); ?>" alt="" width="100%" height="100%" uk-img style="border-radius: 10px;">
+                        <img loading="lazy" src="/img/story-posts/<?= htmlspecialchars($game['cover_img'], ENT_QUOTES, 'UTF-8'); ?>" alt="" width="100%" height="100%" uk-img style="border-radius: 10px;">
                     </div>
 
                     <div class="uk-card-body">
