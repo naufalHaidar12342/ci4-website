@@ -1,7 +1,13 @@
 <?= $this->extend('/layouts/all-page'); ?>
 
 <?= $this->section('content'); ?>
-
+<div class="uk-container uk-margin">
+    <div class="uk-text-center">
+        <h4>Downloads</h4>
+        <p class="uk-text-meta">Situs untuk download game yang ditampilkan disini. Untuk saat ini
+            baru tersedia link untuk download di Steam dan Epic Games Store</p>
+    </div>
+</div>
 <!-- menangkap data yang dikirim oleh controller -->
 <div class="uk-container uk-margin-large">
     <div class="uk-child-width-1-2@m" uk-grid>

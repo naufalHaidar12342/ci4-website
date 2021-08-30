@@ -1,7 +1,12 @@
 <?= $this->extend('/layouts/all-page'); ?>
 
 <?= $this->section('content'); ?>
-
+<div class="uk-container uk-margin">
+    <div class="uk-text-center">
+        <h4>Games</h4>
+        <p class="uk-text-meta">Kumpulan game yang dibahas beserta deskripsi singkat mengenai game tersebut.</p>
+    </div>
+</div>
 <!-- menangkap data yang dikirim oleh controller -->
 <div class="uk-container uk-margin-large">
     <div class="uk-child-width-1-3@m" uk-grid>
