@@ -28,7 +28,7 @@
     </div>
     <div class="footer-copyright">
         <div class="container">
-            <h5 class="white-text">
+            <p class="white-text">
                 <img src="/img/collaboration.svg" alt="" width="
                 24" height="24">
                 A collab between <a href="https://github.com/naufalHaidar12342" class="white-text uk-button-text  uk-text-decoration-none" target="_blank" rel="noreferrer">
@@ -38,7 +38,7 @@
                 <a href="https://github.com/devardha" class="white-text uk-button-text  uk-text-decoration-none" target="_blank" rel="noreferrer">
                     ardhayudatama
                 </a>.
-            </h5>
+            </p>
 
 
         </div>

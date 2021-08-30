@@ -24,7 +24,11 @@ class KanalGame extends BaseController
     // method yang pertama kali dipanggil oleh Routes
     public function index()
     {
-        // $this->cachePage(300);
+        // caching halaman
+        $this->cachePage(120);
+
+        // mengirimkan title bar
+        //dan game yang ditampilkan di view
         $data = [
             'title_bar' => 'Home',
             'show_game' => $this->sitePosts->findAll(),
@@ -42,6 +46,11 @@ class KanalGame extends BaseController
 
     public function downloads()
     {
+        // caching halaman
+        $this->cachePage(120);
+
+        // mengirimkan title bar
+        //dan game yang ditampilkan di view
         $data = [
             'title_bar' => 'Download Game',
             'show_game' => $this->sitePosts->findAll(),
@@ -52,6 +61,7 @@ class KanalGame extends BaseController
 
     public function save()
     {
+        // validasi input user. server side
         if (!$this->validate([
             'pengunjung' => [
                 'rules' => 'required|min_length[4]',
@@ -68,6 +78,8 @@ class KanalGame extends BaseController
                 ]
             ]
         ])) {
+            // mengirimkan pesan validasi ke view
+            //akan diakses melalui array key '$validation'
             $validation = \Config\Services::validation();
             return redirect()->to('/kanal-game/suggest')->withInput()->with('validation', $validation);
         }
@@ -76,6 +88,7 @@ class KanalGame extends BaseController
         $escPengunjung = htmlspecialchars($this->request->getVar('pengunjung'), ENT_QUOTES, 'UTF-8');
         $escKomentar = htmlspecialchars($this->request->getVar('komentar_saran'), ENT_QUOTES, 'UTF-8');
 
+        // array yang membungkus data yang akan disimpan
         $saveData = [
             'nama_pengunjung' => $escPengunjung,
             'komentar_kiriman' => $escKomentar,
@@ -93,7 +106,15 @@ class KanalGame extends BaseController
     // halaman suggest
     public function suggest()
     {
+        // caching halaman
+        $this->cachePage(120);
+
+        // membuka session
         session();
+
+        // mengirimkan title bar, pesan validasi,
+        //serta mengatur pagination untuk komentar
+        //dan array key untuk memanggil pagination
         $data = [
             'title_bar' => 'Suggest A Game!',
             'validation' => \Config\Services::validation(),
@@ -105,6 +126,11 @@ class KanalGame extends BaseController
     }
     public function about_us()
     {
+        // caching halaman website
+        $this->cachePage(120);
+
+        // mengirimkan title bar
+        // serta teknologi yang digunakan
         $data = [
             'title_bar' => 'Tentang Kami',
             'techs' => $this->siteTechs->findAll(),

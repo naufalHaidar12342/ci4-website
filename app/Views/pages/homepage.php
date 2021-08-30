@@ -33,9 +33,9 @@
                             </div>
                         </div>
 
-                        <div class="uk-card-footer uk-margin">
+                        <!-- <div class="uk-card-footer uk-margin">
                             <a href="#" class="uk-button uk-button-text">Selengkapnya</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

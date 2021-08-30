@@ -42,7 +42,6 @@
                 </div>
             <?php endif; ?>
 
-
             <div class="uk-margin">
                 <input class="uk-input  <?= ($validation->hasError('pengunjung')) ? 'uk-form-danger' : ''; ?>" type="text" placeholder="Isi nama kalian disini, ya!" name="pengunjung" value="<?= old('pengunjung'); ?>">
                 <?php if ($validation->hasError('pengunjung')) : ?>
@@ -62,9 +61,6 @@
                     Kirimkan
                 </button>
             </div>
-
-
-
         </fieldset>
     </form>
 </div>
@@ -95,7 +91,7 @@
                     <div class="uk-card-header">
                         <div class="uk-grid-small uk-flex-middle" uk-grid>
                             <div class="uk-width-auto">
-                                <img class="uk-border-circle" width="40" height="40" src="/img/profile-user.svg">
+                                <img class="uk-border-circle" width="40" height="40" src="/img/profile-user.svg" alt="user_icon">
                             </div>
                             <div class="uk-width-expand">
                                 <h3 class="uk-card-title uk-margin-remove-bottom">
