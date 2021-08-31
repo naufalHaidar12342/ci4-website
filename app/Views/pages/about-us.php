@@ -55,14 +55,8 @@
                                 GitHub
                             </a>
                         </p>
-                        <!-- <p>
-                            <a href="https://t.me/heydar12342" rel="noreferrer" target="_blank" class="uk-button-link">
-                                <i class="ri-telegram-fill"></i>
-                                Telegram
-                            </a>
-                        </p> -->
                         <p>
-                            <a href="#" rel="noreferrer" target="_blank" class="uk-button-link">
+                            <a href="https://kanalgames.heydarrn.xyz" rel="noreferrer" target="_blank" class="uk-button-link">
                                 <i class="ri-earth-fill"></i>
                                 Website
                             </a>
