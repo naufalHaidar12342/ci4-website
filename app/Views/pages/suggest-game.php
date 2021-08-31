@@ -102,7 +102,7 @@
                                     $convert = new Time($comment['ditambahkan_pada'], 'Asia/Jakarta', 'en_US');
                                     // parameter untuk format() bisa dilihat di
                                     //https://www.php.net/manual/en/datetime.format.php
-                                    $formatted = $convert->format('d/F/Y G:i:T:P')
+                                    $formatted = $convert->format('d F Y G:i T P')
                                     ?>
                                     mengomentari pada <?= htmlspecialchars($formatted, ENT_HTML5, 'UTF-8'); ?>
                                 </p>
