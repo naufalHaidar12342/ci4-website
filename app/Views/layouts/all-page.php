@@ -6,12 +6,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- css using Materialize CSS -->
+    <link rel="stylesheet" href="/css/materialize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <!-- UI Kit css -->
     <link rel="stylesheet" href="/css/uikit.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <!-- custom styling css -->
     <link rel="stylesheet" href="/css/custom-styling.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <!-- css using Materialize CSS -->
-    <link rel="stylesheet" href="/css/materialize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- material icon by Google Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" crossorigin="anonymous" referrerpolicy="no-referrer">
