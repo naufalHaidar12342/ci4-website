@@ -30,7 +30,7 @@ class KanalGame extends BaseController
         // mengirimkan title bar
         //dan game yang ditampilkan di view
         $data = [
-            'title_bar' => 'Home',
+            'title_bar' => 'Cari info game kesukaan disini!',
             'show_game' => $this->sitePosts->findAll(),
         ];
 
