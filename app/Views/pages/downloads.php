@@ -12,7 +12,7 @@
 <div class="uk-container uk-margin-large">
     <div class="uk-child-width-1-2@m" uk-grid>
         <?php foreach ($show_game as $download) : ?>
-            <div>
+            <div class="animate__animated animate__zoomIn">
                 <!-- card untuk tiap game-->
                 <div class="uk-card uk-card-hover uk-card-default">
                     <div class="uk-card-media-top">

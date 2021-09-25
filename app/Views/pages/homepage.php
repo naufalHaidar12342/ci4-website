@@ -12,8 +12,8 @@
     <div class="uk-child-width-1-3@m" uk-grid>
         <!-- mengakses key dari assoc array bernama  '$show_game' -->
         <?php foreach ($show_game as $game) : ?>
-            <div>
-                <div class="uk-card uk-card-hover uk-card-default uk-border-rounded">
+            <div class="animate__animated animate__fadeInUp">
+                <div class="uk-card uk-card-hover uk-card-default uk-border-rounded ">
                     <!-- cover picture milik game -->
                     <div class="uk-card-media-top">
                         <img loading="lazy" src="/img/story-posts/<?= htmlspecialchars($game['cover_img'], ENT_QUOTES, 'UTF-8'); ?>" alt="" width="100%" height="100%" uk-img style="border-radius: 10px;">
