@@ -25,7 +25,7 @@ class KanalGame extends BaseController
     public function index()
     {
         // caching halaman
-        // $this->cachePage(120);
+        $this->cachePage(120);
 
         // mengirimkan title bar
         //dan game yang ditampilkan di view
@@ -47,7 +47,7 @@ class KanalGame extends BaseController
     public function downloads()
     {
         // caching halaman
-        // $this->cachePage(120);
+        $this->cachePage(120);
 
         // mengirimkan title bar
         //dan game yang ditampilkan di view
@@ -107,7 +107,7 @@ class KanalGame extends BaseController
     public function suggest()
     {
         // caching halaman
-        // $this->cachePage(120);
+        $this->cachePage(120);
 
         // membuka session
         session();
@@ -127,7 +127,7 @@ class KanalGame extends BaseController
     public function about_us()
     {
         // caching halaman website
-        // $this->cachePage(120);
+        $this->cachePage(120);
 
         // mengirimkan title bar
         // serta teknologi yang digunakan
