@@ -107,7 +107,7 @@ class KanalGame extends BaseController
     public function suggest()
     {
         // caching halaman
-        $this->cachePage(120);
+        //$this->cachePage(120);
 
         // membuka session
         session();
