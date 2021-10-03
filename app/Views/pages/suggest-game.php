@@ -9,12 +9,12 @@
         <!-- tombol untuk menuju ke section yang diinginkan -->
         <div class="button-section">
             <div class="button-inner-section">
-                <a href="#suggest_something" class="uk-button uk-button-default uk-text-decoration-none ">
-                    <i class="ri-file-edit-fill" style="font-size: 24px;"></i>
+                <a href="#suggest_something" class="uk-button uk-button-default uk-text-decoration-none hvr-ripple-in">
+                    <i class="far fa-sticky-note"></i>
                     Saran,dong!
                 </a>
-                <a href="#viewers_comments" class="uk-button uk-button-default uk-text-decoration-none">
-                    <i class="ri-eye-fill" style="font-size: 24px;"></i>
+                <a href="#viewers_comments" class="uk-button uk-button-default uk-text-decoration-none hvr-ripple-in">
+                    <i class="fas fa-eye"></i>
                     Lihat Kiriman
                 </a>
             </div>
@@ -56,9 +56,9 @@
                 <?php endif; ?>
             </div>
             <div class="uk-margin">
-                <button type="submit" class="uk-button">
-                    <i class="ri-send-plane-fill"></i>
-                    Kirimkan
+                <button type="submit" class="uk-button hvr-wobble-to-top-right">
+                    <i class="fas fa-paper-plane"></i>
+                    Kirim !
                 </button>
             </div>
         </fieldset>
