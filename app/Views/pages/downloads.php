@@ -12,7 +12,7 @@
 <div class="uk-container uk-margin-large">
     <div class="uk-child-width-1-2@m" uk-grid>
         <?php foreach ($show_game as $download) : ?>
-            <div>
+            <div class="animate__animated animate__zoomIn">
                 <!-- card untuk tiap game-->
                 <div class="uk-card uk-card-hover uk-card-default">
                     <div class="uk-card-media-top">
@@ -68,14 +68,14 @@
 
                             <!-- memeriksa apakah link steam tersedia -->
                             <?php if ($download['steam'] !== '') : ?>
-                                <a href="<?= htmlspecialchars($download['steam'], ENT_HTML5, 'UTF-8'); ?>" class="uk-button uk-margin-right uk-box-shadow-medium light-blue darken-2 waves-effect" target="_blank" rel="noreferrer" style=" color: white; border-radius: 16px;text-decoration:none;">
+                                <a href="<?= htmlspecialchars($download['steam'], ENT_HTML5, 'UTF-8'); ?>" class="uk-button uk-margin-right uk-box-shadow-medium light-blue darken-2 waves-effect hvr-grow-shadow" target="_blank" rel="noreferrer" style=" color: white; border-radius: 16px;text-decoration:none;">
                                     <i class="fab fa-steam"></i>
                                     Steam
                                 </a>
                             <?php endif; ?>
                             <!-- memeriksa apakah link epic games tersedia -->
                             <?php if ($download['epicgames_store'] !== '') : ?>
-                                <a href="<?= htmlspecialchars($download['epicgames_store'], ENT_HTML5, 'UTF-8'); ?>" class="uk-button waves-effect waves-light " target="_blank" rel="noreferrer" style=" color: white; background-color: #2a2a2a; border-radius: 16px; text-decoration: none;">
+                                <a href="<?= htmlspecialchars($download['epicgames_store'], ENT_HTML5, 'UTF-8'); ?>" class="uk-button waves-effect waves-light hvr-grow-shadow" target="_blank" rel="noreferrer" style=" color: white; background-color: #2a2a2a; border-radius: 16px; text-decoration: none;">
                                     <img src="/img/epic_logo_filled_white.png" alt="Epic Game Logo" width="24" height="24">
                                     Epic Games Store
                                 </a>

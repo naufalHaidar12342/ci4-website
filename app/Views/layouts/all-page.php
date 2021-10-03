@@ -115,6 +115,12 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- animate on scroll -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+
     <!-- akan menerima kiriman key bernama'title_bar' milik array. dikirim
     oleh controller -->
     <title>Kanal Game | <?= $title_bar; ?></title>
@@ -145,6 +151,12 @@
 
     <!-- UI Kit icon  -->
     <script src="/js/uikit-icons.min.js" async="true" defer></script>
+
+    <!-- animate on scroll js -->
+    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script> -->
 </body>
 
 </html>
