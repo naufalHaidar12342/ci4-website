@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/heydarnd/public_html/
+    - export DEPLOYPATH=/home/heydarnd/public_html/kanalgames
     - /bin/cp -R public/css $DEPLOYPATH
     - /bin/cp -R public/fonts $DEPLOYPATH
     - /bin/cp -R public/img $DEPLOYPATH
